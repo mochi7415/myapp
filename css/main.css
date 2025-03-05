@@ -57,10 +57,35 @@ footer {
         border: 1px solid #ddd;
         width: 100px;
         margin: auto;
+        padding: 5px 0px;
     }
 }
 
 .division {
     border-bottom: 1px solid #aaa;
-    margin: 10px;
+    margin: 10px 2px;
+}
+
+.gInfo {
+    border: 1px solid #aaa;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 15px;
+    line-height: 120%;
+    .gInfoTitle {
+        margin: 0;
+        margin-bottom: 10px;
+        font-size: 40px;
+    }
+    .gInfoSubTitle {
+        margin: 0px;
+    }
+    .gInfoUl {
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    li {
+        margin: 8px 0px;
+    }
 }
