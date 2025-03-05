@@ -1,6 +1,6 @@
 :root {
     --bg: #141414;
-    --txtC: #ffffff;
+    --txtC: #ddd;
     background: var(--bg);
 }
 
@@ -28,8 +28,8 @@ body {
     font-family: "ＭＳ Ｐ明朝";
     margin: 0 auto;
     position: relative;
-    margin: 10px;
-    font-size: 30px;
+    margin: 0px;
+    font-size: 20px;
     text-align: center;
 }
 footer {
@@ -41,19 +41,26 @@ footer {
 }
 
 #_CONTENT_AREA {
-    max-width: 700px;
+    max-width: 400px;
     margin: auto;
 }
 
 #_EVIDENCE_AREA {
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(auto-fill, 200px);
+    grid-template-columns: repeat(auto-fill, 105px);
     grid-template-rows: auto;
     justify-content: center;
+    gap: 5px;
 
     .evidence {
-        border: 1px solid white;
-        width: 180px;
+        border: 1px solid #ddd;
+        width: 100px;
+        margin: auto;
     }
+}
+
+.division {
+    border-bottom: 1px solid #aaa;
+    margin: 10px;
 }
