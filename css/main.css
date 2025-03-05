@@ -51,7 +51,7 @@ footer {
     grid-template-columns: repeat(auto-fill, 105px);
     grid-template-rows: auto;
     justify-content: center;
-    gap: 5px;
+    gap: 10px;
 
     .evidence {
         border: 1px solid #ddd;
