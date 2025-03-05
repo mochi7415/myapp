@@ -25,9 +25,12 @@ body {
     /* font-family: "Ropa Sans", sans-serif; */
     /* font-family: courier-new, courier, monospace; */
     font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+    font-family: "ＭＳ Ｐ明朝";
     margin: 0 auto;
     position: relative;
     margin: 10px;
+    font-size: 30px;
+    text-align: center;
 }
 footer {
     text-align: center;
@@ -37,9 +40,20 @@ footer {
     font-size: 12px;
 }
 
-body {
-    cursor: grab;
-    padding-top: 100px;
-    font-size: 30px;
-    text-align: center;
+#_CONTENT_AREA {
+    max-width: 700px;
+    margin: auto;
+}
+
+#_EVIDENCE_AREA {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, 200px);
+    grid-template-rows: auto;
+    justify-content: center;
+
+    .evidence {
+        border: 1px solid white;
+        width: 180px;
+    }
 }
