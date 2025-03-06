@@ -20,12 +20,12 @@
 }
 
 body {
-    overflow: hidden;
+    overflow: auto;
     /* font-family: Arial, sans-serif; */
     /* font-family: "Ropa Sans", sans-serif; */
     /* font-family: courier-new, courier, monospace; */
     font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-    font-family: "ＭＳ Ｐ明朝";
+    font-family: "DotGothic16", "ＭＳ Ｐ明朝";
     margin: 0 auto;
     position: relative;
     margin: 0px;
@@ -58,6 +58,7 @@ footer {
         width: 100px;
         margin: auto;
         padding: 5px 0px;
+        font-size: 18px;
     }
 }
 
@@ -69,23 +70,27 @@ footer {
 .gInfo {
     border: 1px solid #aaa;
     padding: 10px;
+    margin-bottom: 5px;
     border-radius: 5px;
     text-align: left;
-    font-size: 15px;
+    font-size: 13px;
     line-height: 120%;
     .gInfoTitle {
         margin: 0;
         margin-bottom: 10px;
-        font-size: 40px;
+        font-size: 35px;
+    }
+    .gInfoMain {
+        margin: 0;
     }
     .gInfoSubTitle {
         margin: 0px;
+        margin-top: 5px;
     }
     .gInfoUl {
         margin: 0;
-        margin-bottom: 20px;
     }
     li {
-        margin: 8px 0px;
+        margin: 4px 0px;
     }
 }
