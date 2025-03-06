@@ -1,5 +1,5 @@
 ## メモ
-
+(https://mochi7415.github.io/myapp/)
 鬼 -Oni-
 ハント開始正気度	50%以下
 特殊能力	なし
