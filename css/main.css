@@ -13,6 +13,9 @@
     color: var(--txtC);
     /* cursor: none; */
     outline: none;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
 }
 
 .inline {
@@ -20,7 +23,7 @@
 }
 
 body {
-    overflow: scroll;
+    overflow-y: scroll;
     scrollbar-gutter: stable both-edges;
     /* font-family: Arial, sans-serif; */
     /* font-family: "Ropa Sans", sans-serif; */
@@ -61,6 +64,7 @@ footer {
         font-size: 18px;
         cursor: pointer;
         user-select: none;
+        outline: 1px solid #141414;
         &:hover {
             background-color: #333;
         }
@@ -89,6 +93,7 @@ footer {
     font-size: 13px;
     line-height: 120%;
     display: block;
+
     &.hidden {
         display: none;
     }
@@ -110,4 +115,14 @@ footer {
     li {
         margin: 4px 0px;
     }
+}
+
+#_HEADER {
+    position: relative;
+}
+#_NUM_RES {
+    position: absolute;
+    right: 0px;
+    bottom: 0;
+    font-size: 12px;
 }

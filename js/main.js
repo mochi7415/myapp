@@ -16,7 +16,7 @@ const GHOST = {
     Phantom: { EVIDENCE: ["SBOX", "UV", "DOTS"] },
     Poltergeist: { EVIDENCE: ["SBOX", "UV", "WRITE"] },
     Myling: { EVIDENCE: ["EMF", "UV", "WRITE"] },
-    Mimic: { EVIDENCE: ["SBOX", "UV", "ZERO"] },
+    Mimic: { EVIDENCE: ["ORB", "SBOX", "UV", "ZERO"] },
     Mare: { EVIDENCE: ["SBOX", "ORB", "WRITE"] },
     Moroi: { EVIDENCE: ["SBOX", "WRITE", "ZERO"] },
     Raiju: { EVIDENCE: ["EMF", "ORB", "DOTS"] },
@@ -35,6 +35,8 @@ let evidence = {
     UV: "unknown",
     WRITE: "unknown",
 };
+
+let notInEvidenceList = [];
 
 document.addEventListener("DOMContentLoaded", async () => {
     document.addEventListener("click", function (event) {
@@ -149,16 +151,21 @@ const ghostListUpdate = () => {
         (key) => evidence[key] === "unknown"
     );
 
+    notInEvidenceList.forEach((el) => {
+        document.getElementById(`_${el}`).classList.remove("off");
+    });
     //  配列内に出現しない証拠のキーを取得
-    let notInEvidenceList = unknownKeys.filter(
+    notInEvidenceList = unknownKeys.filter(
         (key) =>
             !Object.values(selectedGhosts).some((ghost) =>
                 ghost.EVIDENCE.includes(key)
             )
     );
 
-    console.log("含まれない", notInEvidenceList); // 結果: 出現しなかった証拠のリスト
+    console.log("自動的にOFF", notInEvidenceList); // 結果: 出現しなかった証拠のリスト
     notInEvidenceList.forEach((el) => {
         document.getElementById(`_${el}`).classList.add("off");
     });
+
+    _NUM_DIS.textContent = disGhostList.length;
 };
