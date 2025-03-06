@@ -20,7 +20,8 @@
 }
 
 body {
-    overflow: auto;
+    overflow: scroll;
+    scrollbar-gutter: stable both-edges;
     /* font-family: Arial, sans-serif; */
     /* font-family: "Ropa Sans", sans-serif; */
     /* font-family: courier-new, courier, monospace; */
@@ -54,11 +55,23 @@ footer {
     gap: 10px;
 
     .evidence {
-        border: 1px solid #ddd;
         width: 100px;
         margin: auto;
         padding: 5px 0px;
         font-size: 18px;
+        cursor: pointer;
+        user-select: none;
+        &:hover {
+            background-color: #333;
+        }
+        &.on {
+            outline: 1px solid #ddd;
+            font-weight: bold;
+        }
+        &.off {
+            text-decoration: line-through;
+            color: #888;
+        }
     }
 }
 
@@ -75,6 +88,10 @@ footer {
     text-align: left;
     font-size: 13px;
     line-height: 120%;
+    display: block;
+    &.hidden {
+        display: none;
+    }
     .gInfoTitle {
         margin: 0;
         margin-bottom: 10px;
