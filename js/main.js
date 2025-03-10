@@ -24,6 +24,7 @@ const GHOST = {
     Revenant: { EVIDENCE: ["ORB", "WRITE", "ZERO"] },
     Yurei: { EVIDENCE: ["ORB", "ZERO", "DOTS"] },
     Yokai: { EVIDENCE: ["SBOX", "ORB", "DOTS"] },
+    Goryo: { EVIDENCE: ["DOTS", "EMF", "UV"] },
 };
 
 let evidence = {
@@ -70,7 +71,37 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         //サイドメニューの動き
         if (target.id == "_SIDE_BUTTON" || target.id == "_SIDE_AREA_BACK") {
-            console.log("Click->SideeButton");
+            // console.log("Click->SideeButton");
+            _SIDE_BUTTON.classList.toggle("on");
+        }
+
+        //Ghostの表示非表示（手動）
+        if (target.classList.contains("gHide")) {
+            target.parentNode.classList.toggle("hide");
+        }
+
+        //エビデンスのリセット
+        if (target.id == "_EVIDENCE_RESET") {
+            //エビデンスの選択をリセット
+            Array.from(document.getElementsByClassName("evidence")).forEach(
+                (el) => {
+                    el.classList.remove("on");
+                    el.classList.remove("off");
+                }
+            );
+            //オブジェクトを初期化
+            Object.keys(evidence).forEach((key) => {
+                evidence[key] = "unknown";
+            });
+            //表示を更新
+            ghostListUpdate();
+            //Ghostの非表示を全て表示へ
+            Array.from(document.getElementsByClassName("gInfo")).forEach(
+                (el) => {
+                    el.classList.remove("hide");
+                }
+            );
+            //サイドメニュー隠す
             _SIDE_BUTTON.classList.toggle("on");
         }
     });

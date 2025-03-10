@@ -91,6 +91,8 @@ footer {
     font-size: 13px;
     line-height: 120%;
     display: block;
+    position: relative;
+    overflow: hidden;
 
     &.hidden {
         display: none;
@@ -113,6 +115,40 @@ footer {
     li {
         margin: 4px 0px;
     }
+
+    .gHide {
+        position: absolute;
+        top: 5px;
+        right: 11;
+        background-color: #141414;
+        width: 80px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+
+        align-items: center;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        & span {
+            pointer-events: none;
+        }
+        & .gHideMsgShow {
+            display: none;
+        }
+    }
+    &.hide {
+        height: 35px;
+        .gInfoTitle {
+            /* text-decoration: line-through; */
+            color: #888;
+        }
+        .gHideMsgShow {
+            display: inline;
+        }
+        .gHideMsgHide {
+            display: none;
+        }
+    }
 }
 
 #_HEADER {
@@ -134,7 +170,7 @@ footer {
     top: 45vh;
     right: 0vw;
     display: flex;
-    border: 2px solid #ddd;
+    border: 1px solid #ddd;
     border-radius: 10px 0px 0px 10px;
     border-right: 0px solid #ddd;
     cursor: pointer;
@@ -177,4 +213,13 @@ footer {
     top: 0;
     opacity: 0;
     z-index: 10;
+}
+
+#_EVIDENCE_RESET {
+    font-size: 20px;
+    border: 1px solid #ddd;
+    width: 100px;
+    margin: auto;
+    border-radius: 2px;
+    padding: 2px;
 }
