@@ -41,6 +41,8 @@ let notInEvidenceList = [];
 document.addEventListener("DOMContentLoaded", async () => {
     document.addEventListener("click", function (event) {
         const target = event.target;
+        // console.log({ target });
+
         //エビデンスリストのクリックイベント
         if (target.classList.contains("evidence")) {
             let targetEvidence = target.id.slice(1);
@@ -64,6 +66,12 @@ document.addEventListener("DOMContentLoaded", async () => {
             }
             console.log(evidence);
             ghostListUpdate();
+        }
+
+        if (target.id == "_SIDE_BUTTON") {
+            console.log("Click->SideeButton");
+            target.classList.toggle("on");
+            _SIDE_MENU.classList.toggle("on");
         }
     });
 });
