@@ -70,8 +70,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         if (target.id == "_SIDE_BUTTON") {
             console.log("Click->SideeButton");
-            target.classList.toggle("on");
             _SIDE_MENU.classList.toggle("on");
+            target.classList.toggle("on");
         }
     });
 });
