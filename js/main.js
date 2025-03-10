@@ -68,10 +68,10 @@ document.addEventListener("DOMContentLoaded", async () => {
             ghostListUpdate();
         }
 
-        if (target.id == "_SIDE_BUTTON") {
+        if (target.id == "_SIDE_BUTTON" || target.id == "_SIDE_AREA_BACK") {
             console.log("Click->SideeButton");
-            _SIDE_MENU.classList.toggle("on");
-            target.classList.toggle("on");
+            // _SIDE_MENU.classList.toggle("on");
+            _SIDE_BUTTON.classList.toggle("on");
         }
     });
 });
