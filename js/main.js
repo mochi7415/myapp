@@ -104,6 +104,17 @@ document.addEventListener("DOMContentLoaded", async () => {
             //サイドメニュー隠す
             _SIDE_BUTTON.classList.toggle("on");
         }
+
+        //ストップウォッチ
+        if (target.id == "_TIMER_BUTTON") {
+            if (!target.classList.contains("on")) {
+                console.log("start");
+                stopWatch(true);
+            } else {
+                stopWatch(false);
+            }
+            target.classList.toggle("on");
+        }
     });
 });
 
@@ -207,4 +218,26 @@ const ghostListUpdate = () => {
     });
 
     _NUM_DIS.textContent = disGhostList.length;
+};
+
+let timer = null;
+const stopWatch = (flg) => {
+    if (flg) {
+        //スタート
+        let count = 0; // カウント用変数
+        document.getElementById("_TIMER_DIS").textContent = "000";
+
+        timer = setInterval(() => {
+            count++; // 1ずつ加算
+            document.getElementById("_TIMER_DIS").textContent = String(
+                count
+            ).padStart(3, "0"); // 表示を更新
+            if (count == 999) {
+                clearInterval(timer);
+                _TIMER_BUTTON.classList.toggle("on");
+            }
+        }, 1000); // 1秒ごと
+    } else {
+        clearInterval(timer);
+    }
 };

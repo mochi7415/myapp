@@ -223,3 +223,30 @@ footer {
     border-radius: 2px;
     padding: 2px;
 }
+
+#_TIMER {
+    p {
+        margin: 10px;
+    }
+    #_TIMER_BUTTON {
+        width: 100px;
+        margin: auto;
+        border-radius: 2px;
+        padding: 2px;
+        border: 1px solid #ddd;
+        span {
+            pointer-events: none;
+        }
+        .timerStop {
+            display: none;
+        }
+        &.on {
+            .timerStop {
+                display: inline;
+            }
+            .timerStart {
+                display: none;
+            }
+        }
+    }
+}
