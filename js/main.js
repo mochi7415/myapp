@@ -68,9 +68,9 @@ document.addEventListener("DOMContentLoaded", async () => {
             ghostListUpdate();
         }
 
+        //サイドメニューの動き
         if (target.id == "_SIDE_BUTTON" || target.id == "_SIDE_AREA_BACK") {
             console.log("Click->SideeButton");
-            // _SIDE_MENU.classList.toggle("on");
             _SIDE_BUTTON.classList.toggle("on");
         }
     });
@@ -144,9 +144,9 @@ const ghostListUpdate = () => {
     });
 
     //
-    // 配列Aに含まれるゴーストのみを抽出
+    // disGhostListに含まれるゴーストのみを抽出
     let selectedGhosts = Object.keys(GHOST)
-        .filter((ghost) => disGhostList.includes(ghost)) // Aに含まれるゴーストをフィルタリング
+        .filter((ghost) => disGhostList.includes(ghost)) // disGhostListに含まれるゴーストをフィルタリング
         .reduce((result, ghost) => {
             result[ghost] = GHOST[ghost]; // GHOSTオブジェクトからそのゴーストを抽出
             return result;
