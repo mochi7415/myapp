@@ -232,6 +232,7 @@ const stopWatch = (flg) => {
             document.getElementById("_TIMER_DIS").textContent = String(
                 count
             ).padStart(3, "0"); // 表示を更新
+            document.title = count;
             if (count == 999) {
                 clearInterval(timer);
                 _TIMER_BUTTON.classList.toggle("on");
@@ -239,5 +240,6 @@ const stopWatch = (flg) => {
         }, 1000); // 1秒ごと
     } else {
         clearInterval(timer);
+        document.title = "Survey Tool";
     }
 };

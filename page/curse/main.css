@@ -2,6 +2,10 @@
     --bg: #141414;
     --txtC: #ddd;
     background: var(--bg);
+    overflow: hidden;
+}
+html {
+    overflow: hidden;
 }
 
 *,
@@ -23,7 +27,7 @@
 }
 
 body {
-    overflow-y: scroll;
+    overflow-y: hidden;
     scrollbar-gutter: stable both-edges;
     /* font-family: Arial, sans-serif; */
     /* font-family: "Ropa Sans", sans-serif; */
@@ -38,4 +42,8 @@ body {
 }
 h1 {
     background-color: aqua;
+}
+
+body {
+    border: 1px solid aqua;
 }
