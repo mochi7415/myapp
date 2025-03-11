@@ -21,14 +21,6 @@
     transition-duration: 300ms;
 }
 
-.inline {
-    display: inline;
-}
-
-.inline {
-    display: inline;
-}
-
 body {
     overflow-y: auto;
     scrollbar-gutter: stable both-edges;
@@ -63,6 +55,13 @@ footer {
     }
 }
 
+#_HEADER {
+    position: sticky;
+    top: 0;
+    background-color: #141414;
+    z-index: 100;
+}
+
 #_EVIDENCE_AREA {
     display: grid;
     width: 100%;
@@ -93,7 +92,8 @@ footer {
 
 .division {
     border-bottom: 1px solid #aaa;
-    margin: 10px 2px;
+    padding: 5px;
+    margin-bottom: 10px;
 }
 
 .gInfo {
@@ -165,9 +165,6 @@ footer {
     }
 }
 
-#_HEADER {
-    position: relative;
-}
 #_NUM_RES {
     position: absolute;
     right: 0px;
