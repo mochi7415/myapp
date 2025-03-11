@@ -1071,5 +1071,57 @@ Restricted	中	3人	精神病院
 
 
 
+どこでも反応のあるフレーズ
+これらの質問はアイテムを介さずにそのまま話しかけることで、ゴーストが超常現象などで反応を示すことがあります。
+
+日本語	English
+音をだして	Make a noise
+ドアを開けて	Open a door
+ドア開けて	Open this door
+電気をつけて	Turn on the light
+電気を消して	Turn off the light
+もしもし/アピールしてください	Give us a sign
+なにかして	Do something
+見せて	Show us
+私達にみせて	Show me
+いますか	Is there anyone here
+音をたてて	Can you make a sound
+出てきて	Show us your presence
+何かたたいて	Knock something
+音を鳴らして	Make a sound
+ドアを開けて	Open the door
+何か投げて	Throw something
+
+
+
+
+
+質問一覧
+音声認識に対応している質問で、情報提供等により判明しているものを記載しています。
+
+公式の情報ではなく、古い情報や正確ではない可能性があるのでご了承ください。
+
+日本語	English
+なにがしたいですか？	What do you want?
+出て行って欲しいですか？/出て行って	Do you want us to leave?
+どこに居ますか？	Where are you?
+近くに居ますか？	Are you close?
+姿を見せて	Can you show yourself?
+アピールしてください	Give us a sign.
+もしもし	Let us know you are here?
+ここにいますか？	Are you here?
+誰かいますか？	Anybody with us?
+誰かいませんか？	Is anyone here?
+部屋に誰かいますか？	Anybody in the room?
+ハロー	Hello.
+ハイ	Hi.
+ここにいますか？	Is there a Ghost here?
+どこにいますか？	What is your location?
+子供ですか？	Are you a child?
+若いですか？	Are you young?
+
+
+
+
 
 
