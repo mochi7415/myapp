@@ -1,0 +1,41 @@
+:root {
+    --bg: #141414;
+    --txtC: #ddd;
+    background: var(--bg);
+}
+
+*,
+:after,
+:before {
+    box-sizing: border-box;
+    border: 0 solid #e5e7eb;
+    background-color: transparent;
+    color: var(--txtC);
+    /* cursor: none; */
+    outline: none;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+}
+
+.inline {
+    display: inline;
+}
+
+body {
+    overflow-y: scroll;
+    scrollbar-gutter: stable both-edges;
+    /* font-family: Arial, sans-serif; */
+    /* font-family: "Ropa Sans", sans-serif; */
+    /* font-family: courier-new, courier, monospace; */
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+    font-family: "DotGothic16", "ＭＳ Ｐ明朝";
+    margin: 0 auto;
+    position: relative;
+    margin: 0px;
+    font-size: 20px;
+    text-align: center;
+}
+h1 {
+    background-color: aqua;
+}

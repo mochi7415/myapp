@@ -38,14 +38,7 @@ let evidence = {
 };
 
 let notInEvidenceList = [];
-function loadContent(url) {
-    fetch(url)
-        .then((response) => response.text())
-        .then(
-            (html) => (document.getElementById("contentArea").innerHTML = html)
-        );
-}
-loadContent("../page/curse/curse.html");
+
 document.addEventListener("DOMContentLoaded", async () => {
     document.addEventListener("click", function (event) {
         const target = event.target;
