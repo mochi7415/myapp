@@ -38,15 +38,22 @@ body {
 }
 footer {
     text-align: center;
-    position: absolute;
+    position: fixed;
     bottom: 0px;
     right: 0px;
-    font-size: 12px;
+    font-size: 5px;
 }
 
 #_CONTENT_AREA {
     max-width: 400px;
     margin: auto;
+    position: relative;
+}
+
+#_SURVEY_PAGE {
+    &.hide {
+        display: none;
+    }
 }
 
 #_EVIDENCE_AREA {
@@ -251,7 +258,15 @@ footer {
         }
     }
 }
-
-iframe {
+#_PAGE_AREA {
+    position: absolute;
+    top: 0;
     width: 100%;
+    iframe {
+        width: 100%;
+        min-height: 100%;
+        &.hide {
+            display: none;
+        }
+    }
 }
