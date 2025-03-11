@@ -2,10 +2,8 @@
     --bg: #141414;
     --txtC: #ddd;
     background: var(--bg);
-    overflow: hidden;
-}
-html {
-    overflow: hidden;
+    /* overflow: hidden; */
+    height: min-content;
 }
 
 *,
@@ -27,7 +25,7 @@ html {
 }
 
 body {
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
     scrollbar-gutter: stable both-edges;
     /* font-family: Arial, sans-serif; */
     /* font-family: "Ropa Sans", sans-serif; */
@@ -39,11 +37,60 @@ body {
     margin: 0px;
     font-size: 20px;
     text-align: center;
-}
-h1 {
-    background-color: aqua;
+    height: min-content;
 }
 
-body {
-    border: 1px solid aqua;
+.curseItem {
+    border: 1px solid #ddd;
+    padding: 10px;
+    padding-top: 0px;
+    border-radius: 5px;
+    margin: 3px;
+    /* overflow: hidden; */
+    position: relative;
+    .cTitle {
+        position: sticky;
+        border-bottom: 1px solid #aaa;
+        padding: 3px;
+        padding-top: 0px;
+        font-size: 25px;
+        margin: 0;
+    }
+    .cHide {
+        position: absolute;
+        top: 5px;
+        right: 11;
+        background-color: #141414;
+        width: 80px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+
+        align-items: center;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        span {
+            pointer-events: none;
+        }
+        .cHideMsgShow {
+            display: none;
+        }
+    }
+    &.hide {
+        height: 35px;
+        .cTitle {
+            /* text-decoration: line-through; */
+            color: #888;
+            border: 0;
+        }
+        .cHideMsgShow {
+            display: inline;
+        }
+        .cHideMsgHide {
+            display: none;
+        }
+        .content {
+            display: none;
+        }
+    }
 }
