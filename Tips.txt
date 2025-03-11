@@ -1052,6 +1052,21 @@ Doom Slayed	Get killed by a Demon ability within the first minute	1分以内に�
 
 
 
+6 Tanglewood Drive	小	1人	一軒家
+Camp Woodwind	小	1人	キャンプ場
+Bleasdale Farmhouse	小	2人	農家
+Grafton Farmhouse	小	2人	農家
+10 Ridgeview Court	小	2人	一軒家
+42 Edgefield Road	小	2人	一軒家
+13 Willow Street	小	2人	一軒家
+Point Hope	小	？	灯台
+Brownstone High School	大	3人	学校
+Prison	中	3人	刑務所
+Maple Lodge Campsite	中	3人	キャンプ場
+Sunny Meadows Mental Institution	大	4人	精神病院
+Sunny Meadows Mental Institution
+Restricted	中	3人	精神病院
+
 
 
 
