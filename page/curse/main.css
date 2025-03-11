@@ -50,6 +50,7 @@ body {
     position: relative;
     .cTitle {
         position: sticky;
+        top: 0;
         border-bottom: 1px solid #aaa;
         padding: 3px;
         padding-top: 0px;
