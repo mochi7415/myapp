@@ -16,11 +16,15 @@
     <body>
         <div id="_CURSE_ITEMS">
             <div id="_MONKEY_PAW" class="curseItem">
-                <p class="cTitle">Monkey Paw</p>
-                <div class="cHide">
-                    <span class="cHideMsgHide">Hide</span
-                    ><span class="cHideMsgShow">Show</span>
+                <div class="cTitleArea">
+                    <p class="cTitle">Monkey Paw</p>
+                    <div class="division"></div>
+                    <div class="cHide">
+                        <span class="cHideMsgHide">Hide</span
+                        ><span class="cHideMsgShow">Show</span>
+                    </div>
                 </div>
+
                 <div class="content">
                     <p>
                         呪いのアイテムの一つで、手にした状態で願い事を口にすることで代償と引き換えに願い事を叶えてくれます。
@@ -44,10 +48,13 @@
                 </div>
             </div>
             <div id="_TE" class="curseItem">
-                <p class="cTitle">Monkey Paw2</p>
-                <div class="cHide">
-                    <span class="cHideMsgHide">Hide</span
-                    ><span class="cHideMsgShow">Show</span>
+                <div class="cTitleArea">
+                    <p class="cTitle">Monkey Paw2</p>
+                    <div class="division"></div>
+                    <div class="cHide">
+                        <span class="cHideMsgHide">Hide</span
+                        ><span class="cHideMsgShow">Show</span>
+                    </div>
                 </div>
                 <div class="content">
                     <p>
@@ -72,10 +79,13 @@
                 </div>
             </div>
             <div id="_TEe" class="curseItem">
-                <p class="cTitle">Monkey Paw4</p>
-                <div class="cHide">
-                    <span class="cHideMsgHide">Hide</span
-                    ><span class="cHideMsgShow">Show</span>
+                <div class="cTitleArea">
+                    <p class="cTitle">Monkey Paw4</p>
+                    <div class="division"></div>
+                    <div class="cHide">
+                        <span class="cHideMsgHide">Hide</span
+                        ><span class="cHideMsgShow">Show</span>
+                    </div>
                 </div>
                 <div class="content">
                     <p>
@@ -109,7 +119,7 @@
                 const target = event.target;
                 //Ghostの表示非表示（手動）
                 if (target.classList.contains("cHide")) {
-                    target.parentNode.classList.toggle("hide");
+                    target.parentNode.parentNode.classList.toggle("hide");
                     sendHeight();
                 }
             });

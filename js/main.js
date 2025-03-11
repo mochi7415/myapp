@@ -147,7 +147,7 @@ function resizeIframe(event) {
     if (event.origin !== window.location.origin) return; // セキュリティ対策
     const iframe = document.getElementById("_CURSE_PAGE");
     if (iframe && event.data.height) {
-        iframe.style.height = event.data.height + 130 + "px";
+        // iframe.style.height = event.data.height + 130 + "px";
     }
 }
 
