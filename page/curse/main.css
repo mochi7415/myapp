@@ -21,6 +21,8 @@
     transition-property: all;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 300ms;
+    border-collapse: separate;
+    border-spacing: 0px;
 }
 
 .section::-webkit-scrollbar {
@@ -68,6 +70,26 @@ body {
     font-size: 20px;
     text-align: center;
     height: min-content;
+}
+table {
+    margin: auto;
+    max-width: 100%;
+
+    th,
+    td {
+        text-align: center;
+        font-size: 14px;
+        border: 1px solid #ddd;
+        padding: 5px;
+        font-weight: normal;
+    }
+}
+
+#_OUIJA_BOARD {
+    td:nth-child(1),
+    td:nth-child(3) {
+        text-align: left;
+    }
 }
 
 .curseItem {
