@@ -91,6 +91,11 @@ table {
         text-align: left;
     }
 }
+#_TAROT_CARD {
+    td:nth-child(3) {
+        text-align: left;
+    }
+}
 
 .curseItem {
     border: 1px solid #ddd;
@@ -138,6 +143,11 @@ table {
         font-size: 15px;
         .conTitle {
             margin: 4px;
+        }
+        .conSubTitle {
+            margin: 4px;
+            text-align: left;
+            margin-top: 15px;
         }
         ul {
             padding: 0;

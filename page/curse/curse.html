@@ -266,7 +266,7 @@
                     </ul>
                 </div>
             </div>
-            <div id="_MONKEY_POW" class="curseItem">
+            <div id="_MONKEY_POW" class="curseItem hide">
                 <div class="cTitleArea">
                     <p class="cTitle">Monkey Paw</p>
                     <div class="division"></div>
@@ -291,90 +291,164 @@
                             1度の調査で同じ願い事を複数回利用することはできない
                         </li>
                     </ul>
-                    <p class="conTitle">- 活用的な使用方法 -</p>
-                    <ul>
-                        <li>
-                            ハントを起こしたい場合、「かくれんぼ」というか、プランシェットを出したままウィジャ盤から離れれば正気度を減らさずに呪いのハントを発生させることが可能。
-                        </li>
-                        <li>
-                            ウィジャ盤が質問を認識した場合はEMFレベル2の反応が出る。EMFレベル5を証拠に持つゴーストの場合、正気度減少が少ない質問を繰り返すことで、比較的楽にEMFレベル5の反応を取ることが可能。
-                        </li>
-                    </ul>
-                    <p class="conTitle">- 正気度系の質問について -</p>
-                    <ul>
-                        <li>正気度系の質問のコストはすべて 5%。</li>
-                        <li>返答は、質問による正気度が減った後の正気度。</li>
-                    </ul>
+
                     <p class="conTitle">- 質問一覧 -</p>
+                    <p class="conSubTitle">== ゴーストが見たい ==</p>
+                    <ul>
+                        <li>正:ゴーストがゴーストの現在位置で実体化</li>
+                        <li>負:視界が暗くなり、5秒後に呪いのハントが開始。</li>
+                    </ul>
+                    <p class="conSubTitle">== 怪奇現象が見たい ==</p>
+                    <ul>
+                        <li>
+                            正:ゴーストの干渉、徘徊、特殊能力の確率が2分間2倍。
+                        </li>
+                        <li>
+                            負:ブレーカーが故障し、玄関が2分間開かなくなる。
+                        </li>
+                    </ul>
+                    <p class="conSubTitle">== 閉じ込めたい ==</p>
+                    <ul>
+                        <li>正:ゴーストをゴーストルームに1分間閉じ込める</li>
+                        <li>
+                            負:プレイヤーのいる部屋のドアも1分間開かなくなる。その後は通常のハントが開始する。
+                        </li>
+                    </ul>
+                    <p class="conSubTitle">== 正気を戻りたい ==</p>
+                    <ul>
+                        <li>正:全てのプレイヤーの正気度を50%にする。</li>
+                        <li>
+                            負:ゴーストルームが変更。暗闇での正気度の減少量が50%増える。
+                        </li>
+                    </ul>
+                    <p class="conSubTitle">== 身を守りたい ==</p>
+                    <ul>
+                        <li>正:近くにある塞がれた隠れ場所が開放される。</li>
+                        <li>
+                            負:部屋の電球が割れ、ハント時に電子機器や声が届く距離に制限がなくなる。
+                        </li>
+                    </ul>
+                    <p class="conSubTitle">== 帰りたい ==</p>
+                    <ul>
+                        <li>正:ハント中に使うと玄関を開けられるようになる。</li>
+                        <li>負:5秒間移動速度が減少、その間視界が狭まる。</li>
+                    </ul>
+                    <p class="conSubTitle">== 生き返りたい ==</p>
+                    <ul>
+                        <li>正:死亡したプレイヤーを生き返らせる。</li>
+                        <li>負:50%の確率で使用者が死亡する。</li>
+                    </ul>
+                    <p class="conSubTitle">== 知識が欲しい ==</p>
+                    <ul>
+                        <li>正:ジャーナルで証拠がひとつ除外される。</li>
+                        <li>
+                            負:プレイヤーの近くで呪いのハントが開始。視界が暗くなり音もほとんど聞こえなくなる（死ぬまで永続）。
+                        </li>
+                    </ul>
+                    <p class="conSubTitle">
+                        == (晴れ/雨/霧/夜明け/雪)になって ==
+                    </p>
+                    <ul>
+                        <li>正:天候を即座に変更する。</li>
+                        <li>
+                            負:正気度を25%消費。（足りないときは使えない）。
+                        </li>
+                    </ul>
+                    <p class="conSubTitle">== ゴーストが見たい ==</p>
+                    <ul>
+                        <li>正:ゴーストがゴーストの現在位置で実体化</li>
+                        <li>負:視界が暗くなり、5秒後に呪いのハントが開始。</li>
+                    </ul>
+                    <p class="conSubTitle">== ゴーストが見たい ==</p>
+                    <ul>
+                        <li>正:ゴーストがゴーストの現在位置で実体化</li>
+                        <li>負:視界が暗くなり、5秒後に呪いのハントが開始。</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="_TAROT_CARD" class="curseItem hide">
+                <div class="cTitleArea">
+                    <p class="cTitle">Tarot Card</p>
+                    <div class="division"></div>
+                    <div class="cHide">
+                        <span class="cHideMsgHide">Hide</span
+                        ><span class="cHideMsgShow">Show</span>
+                    </div>
+                </div>
+                <div class="content">
+                    <p class="conTitle">- 効果 -</p>
+                    <ul>
+                        <li>引いたカードにより効果が変わる</li>
+                    </ul>
+                    <p class="conTitle">- 注意点 -</p>
+                    <ul>
+                        <li>ハント中に引くと全てTHE FOOL(はずれ)になる。</li>
+                        <li>
+                            現状、カードを10枚全て引き終わるとの後のハントが呪いのハントになるバグがある。
+                        </li>
+                    </ul>
+
+                    <p class="conTitle">- カード一覧 -</p>
                     <table>
                         <thead>
                             <tr>
-                                <th>質問</th>
-                                <th>消費</th>
-                                <th>返答</th>
+                                <th>種類</th>
+                                <th>確率</th>
+                                <th>効果</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td rowspan="3">
-                                    SAN値いくつ? <br />Am I insane
-                                </td>
-                                <td rowspan="3">5%</td>
-                                <td>100以下 No</td>
+                                <td>DEATH</td>
+                                <td>10%</td>
+                                <td>呪いのハントが発生</td>
                             </tr>
                             <tr>
-                                <td>90以下 Maybe</td>
+                                <td>THE MOON</td>
+                                <td>5%</td>
+                                <td>引いた人の正気度が0になる</td>
                             </tr>
                             <tr>
-                                <td>20以下 Yes</td>
+                                <td>THE SUN</td>
+                                <td>5%</td>
+                                <td>引いた人の正気度を100%まで回復</td>
                             </tr>
                             <tr>
-                                <td rowspan="5">
-                                    正気度教えて? <br />
-                                    What is my sanity?
-                                </td>
-                                <td rowspan="5">5%</td>
-                                <td>100以下 HEALTHY</td>
+                                <td>THE HERMIT</td>
+                                <td>10%</td>
+                                <td>ゴーストルームに1分間閉じ込める</td>
                             </tr>
                             <tr>
-                                <td>80以下 GOOD</td>
-                            </tr>
-                            <tr>
-                                <td>60以下 AVERAGE</td>
-                            </tr>
-                            <tr>
-                                <td>40以下 BAD</td>
-                            </tr>
-                            <tr>
-                                <td>20以下 AWFUL</td>
-                            </tr>
-                            <tr>
-                                <td rowspan="3">
-                                    正気度いくつ? <br />How insane
-                                </td>
-                                <td rowspan="3">5%</td>
-                                <td>100以下 NOT VERY</td>
-                            </tr>
-                            <tr>
-                                <td>50以下 VERY</td>
-                            </tr>
-                            <tr>
-                                <td>25以下 INSANE</td>
-                            </tr>
-                            <tr>
-                                <td>ゴーストの現在位置</td>
-                                <td>50%</td>
-                                <td>部屋名</td>
-                            </tr>
-                            <tr>
-                                <td>骨の位置</td>
+                                <td>THE TOWER</td>
                                 <td>20%</td>
-                                <td>部屋名</td>
+                                <td>20秒間ゴーストアクティビティが2倍</td>
                             </tr>
                             <tr>
-                                <td>かくれんぼ</td>
-                                <td>0%</td>
-                                <td>強制ハント</td>
+                                <td>WHEEL OF <br />FORTUNE</td>
+                                <td>20%</td>
+                                <td>正気度が緑で25%上がり、赤で25%下がる</td>
+                            </tr>
+                            <tr>
+                                <td>THE HIGH <br />PRIESTESS</td>
+                                <td>2%</td>
+                                <td>
+                                    死んだプレイヤーを復活させる<br />（または次に死んだプレイヤー）
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>WHEEL OF <br />FORTUNE</td>
+                                <td>1%</td>
+                                <td>引いたプレイヤーは即死</td>
+                            </tr>
+                            <tr>
+                                <td>THE DEVIL</td>
+                                <td>10%</td>
+                                <td>ゴーストに一番近い人の部屋で超常現象</td>
+                            </tr>
+                            <tr>
+                                <td>THE FOOL</td>
+                                <td>17%</td>
+                                <td>カードが愚者のカードに変わる。はずれ</td>
                             </tr>
                         </tbody>
                     </table>
