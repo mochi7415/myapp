@@ -25,37 +25,6 @@
     border-spacing: 0px;
 }
 
-.section::-webkit-scrollbar {
-    width: 16px;
-}
-
-.section::-webkit-scrollbar-track {
-    background-color: #e4e4e4;
-    border-radius: 100px;
-}
-
-.section::-webkit-scrollbar-thumb {
-    background-color: #d4aa70;
-    border-radius: 100px;
-}
-
-.section::-webkit-scrollbar {
-    width: 16px;
-}
-
-.section::-webkit-scrollbar-track {
-    background-color: #e4e4e4;
-    border-radius: 100px;
-}
-
-.section::-webkit-scrollbar-thumb {
-    background-color: #d4aa70;
-    border-radius: 100px;
-}
-.inline {
-    display: inline;
-}
-
 body {
     /* overflow-y: hidden; */
     scrollbar-gutter: stable both-edges;
@@ -97,7 +66,7 @@ table {
     }
 }
 
-.curseItem {
+.tipsItem {
     border: 1px solid #ddd;
     padding: 10px;
     padding-top: 0px;
@@ -106,7 +75,7 @@ table {
     margin: 10px 0px;
     /* overflow: hidden; */
     position: relative;
-    .cTitleArea {
+    .tTitleArea {
         position: sticky;
         top: 10px;
         z-index: 100;
@@ -115,14 +84,14 @@ table {
         height: 42px;
         top: 0;
     }
-    .cTitle {
+    .tTitle {
         border-bottom: 1px solid #ddd;
         padding: 5px;
 
         font-size: 21px;
         margin: 0;
     }
-    .cHide {
+    .tHide {
         position: absolute;
         top: 8px;
         right: 11;
@@ -138,7 +107,7 @@ table {
         span {
             pointer-events: none;
         }
-        .cHideMsgShow {
+        .tHideMsgShow {
             display: none;
         }
     }
@@ -177,15 +146,15 @@ table {
     }
     &.hide {
         height: 49px;
-        .cTitle {
+        .tTitle {
             /* text-decoration: line-through; */
             /* color: #888; */
             border: 0;
         }
-        .cHideMsgShow {
+        .tHideMsgShow {
             display: inline;
         }
-        .cHideMsgHide {
+        .tHideMsgHide {
             display: none;
         }
         .content {

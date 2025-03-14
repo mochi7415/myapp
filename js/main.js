@@ -40,7 +40,6 @@ let evidence = {
 let notInEvidenceList = [];
 
 document.addEventListener("DOMContentLoaded", async () => {
-    window.addEventListener("message", resizeIframe, false);
     document.addEventListener("click", function (event) {
         const target = event.target;
         // console.log({ target });
@@ -117,39 +116,20 @@ document.addEventListener("DOMContentLoaded", async () => {
             target.classList.toggle("on");
         }
 
-        //呪いのアイテムメニュー
-
         //サイドメニューの動き
-        if (target.id == "_MENU_CURSE") {
-            // console.log("Click->SideeButton");
+        if (target.id.slice(0, 5) == "_MENU") {
             Array.from(document.getElementsByClassName("pages")).forEach(
                 (el) => {
                     el.classList.add("hide");
                 }
             );
-            _CURSE_PAGE.classList.remove("hide");
-            _SIDE_BUTTON.classList.remove("on");
-        }
-        //サイドメニューの動き
-        if (target.id == "_MENU_SURVEY") {
-            // console.log("Click->SideeButton");
-            Array.from(document.getElementsByClassName("pages")).forEach(
-                (el) => {
-                    el.classList.add("hide");
-                }
-            );
-            _SURVEY_PAGE.classList.remove("hide");
+            document
+                .getElementById(`${target.id.slice(5)}_PAGE`)
+                .classList.remove("hide");
             _SIDE_BUTTON.classList.remove("on");
         }
     });
 });
-function resizeIframe(event) {
-    if (event.origin !== window.location.origin) return; // セキュリティ対策
-    const iframe = document.getElementById("_CURSE_PAGE");
-    if (iframe && event.data.height) {
-        // iframe.style.height = event.data.height + 130 + "px";
-    }
-}
 
 /**
  * ebidenceの値によってゴーストリストの表示を更新
