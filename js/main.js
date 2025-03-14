@@ -40,6 +40,9 @@ let evidence = {
 let notInEvidenceList = [];
 
 document.addEventListener("DOMContentLoaded", async () => {
+    //longPressの初期化
+    longPress.init();
+
     document.addEventListener("click", function (event) {
         const target = event.target;
         // console.log({ target });
@@ -82,27 +85,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         //エビデンスのリセット
         if (target.id == "_EVIDENCE_RESET") {
-            //エビデンスの選択をリセット
-            Array.from(document.getElementsByClassName("evidence")).forEach(
-                (el) => {
-                    el.classList.remove("on");
-                    el.classList.remove("off");
-                }
-            );
-            //オブジェクトを初期化
-            Object.keys(evidence).forEach((key) => {
-                evidence[key] = "unknown";
-            });
-            //表示を更新
-            ghostListUpdate();
-            //Ghostの非表示を全て表示へ
-            Array.from(document.getElementsByClassName("gInfo")).forEach(
-                (el) => {
-                    el.classList.remove("hide");
-                }
-            );
-            //サイドメニュー隠す
-            _SIDE_BUTTON.classList.toggle("on");
+            reset();
         }
 
         //ストップウォッチ
@@ -255,4 +238,83 @@ const stopWatch = (flg) => {
         clearInterval(timer);
         document.title = "Survey Tool";
     }
+};
+
+const reset = () => {
+    //エビデンスの選択をリセット
+    Array.from(document.getElementsByClassName("evidence")).forEach((el) => {
+        el.classList.remove("on");
+        el.classList.remove("off");
+    });
+    //オブジェクトを初期化
+    Object.keys(evidence).forEach((key) => {
+        evidence[key] = "unknown";
+    });
+    //表示を更新
+    ghostListUpdate();
+    //Ghostの非表示を全て表示へ
+    Array.from(document.getElementsByClassName("gInfo")).forEach((el) => {
+        el.classList.remove("hide");
+    });
+    //サイドメニュー隠す
+    _SIDE_BUTTON.classList.toggle("on");
+};
+
+const longPress = {
+    // プロパティ
+    innerEl: document.getElementById("inner_circle"), //内側の円
+    outerEl: document.getElementById("outer_circle"), //外側の円
+    second: 1.5, //長押しの時間
+    count: 0,
+    timerId: 0,
+    interval: 1,
+
+    // 初期化処理
+    init: function (param) {
+        // イベントリスナー
+        this.outerEl.addEventListener(
+            "pointerdown",
+            () => {
+                this.start();
+            },
+            false
+        );
+        this.outerEl.addEventListener(
+            "pointerup",
+            () => {
+                this.end();
+            },
+            false
+        );
+        this.outerEl.addEventListener(
+            "pointerout",
+            () => {
+                this.end();
+            },
+            false
+        );
+        this.outerEl.oncontextmenu = () => {
+            return false;
+        };
+    },
+
+    // 長押し中の処理
+    start: function () {
+        this.timerId = setInterval(() => {
+            this.count++;
+            this.innerEl.style.width = this.count / this.second + "%";
+
+            if (this.count / 100 === this.second) {
+                reset();
+                this.end();
+            }
+        }, this.interval);
+    },
+
+    // 長押し中断の処理
+    end: function () {
+        clearInterval(this.timerId);
+        this.count = 0;
+        this.innerEl.style.width = "0px";
+    },
 };

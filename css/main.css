@@ -229,6 +229,7 @@ footer {
 }
 
 #_EVIDENCE_RESET {
+    display: none;
     font-size: 20px;
     border: 1px solid #ddd;
     width: 100px;
@@ -299,4 +300,40 @@ footer {
             display: none;
         }
     }
+}
+
+#outer_circle {
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100px;
+    height: 30px;
+    border-radius: 0%;
+    transition: none;
+    background-color: #141414;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    p {
+        user-select: none;
+        margin: 0;
+        margin-top: 2px;
+    }
+}
+
+#inner_circle {
+    /*   display:none; */
+    text-align: center;
+    background: transparent;
+    width: 0px;
+    height: 30px;
+    border-radius: 0%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    color: #141414;
+    pointer-events: none;
+    transition: none;
+    backdrop-filter: invert(1);
+    user-select: none;
 }

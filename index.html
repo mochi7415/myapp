@@ -1,7 +1,7 @@
 <html>
     <!--
 
-
+        干渉、ハントについての知識
 
     -->
     <head>
@@ -18,7 +18,7 @@
         />
         <link rel="stylesheet" href="./css/main.css?version=1.0.0" />
     </head>
-    <body>
+    <body oncontextmenu="return false;">
         <div id="_CONTENT_AREA">
             <div id="_SURVEY_PAGE" class="pages">
                 <div id="_HEADER">
@@ -784,7 +784,7 @@
 
             <div id="_SIDE_MENU_AREA">
                 <!-- //↓のクラスにOnを指定して、初期値=表示 -->
-                <div id="_SIDE_BUTTON" class="">
+                <div id="_SIDE_BUTTON" class="on">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="32"
@@ -802,7 +802,10 @@
                     <!-- <p>- MENU -</p> -->
                     <h5 id="_MENU_SURVEY">== Survey Tool ==</h5>
                     <p id="_EVIDENCE_RESET">Reset</p>
-
+                    <div id="outer_circle">
+                        <p>Reset</p>
+                        <div id="inner_circle"></div>
+                    </div>
                     <div id="_TIMER">
                         <div id="_TIMER_BORDER"></div>
                         <div id="_TIMER_AREA">
