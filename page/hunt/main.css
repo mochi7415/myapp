@@ -1,0 +1,164 @@
+:root {
+    --bg: #141414;
+    --txtC: #ddd;
+    background: var(--bg);
+    /* overflow: hidden; */
+    height: min-content;
+    scrollbar-color: #444 #141414;
+    scrollbar-width: thin;
+    scrollbar-gutter: stable;
+}
+
+*,
+:after,
+:before {
+    box-sizing: border-box;
+    border: 0 solid #e5e7eb;
+    background-color: transparent;
+    color: var(--txtC);
+    /* cursor: none; */
+    outline: none;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+    border-collapse: separate;
+    border-spacing: 0px;
+}
+
+body {
+    /* overflow-y: hidden; */
+    scrollbar-gutter: stable both-edges;
+    /* font-family: Arial, sans-serif; */
+    /* font-family: "Ropa Sans", sans-serif; */
+    /* font-family: courier-new, courier, monospace; */
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+    font-family: "DotGothic16", "ＭＳ Ｐ明朝";
+    margin: 0 auto;
+    position: relative;
+    margin: 0px;
+    font-size: 20px;
+    text-align: center;
+    height: min-content;
+}
+table {
+    margin: auto;
+    max-width: 100%;
+
+    th,
+    td {
+        text-align: center;
+        font-size: 14px;
+        border: 1px solid #ddd;
+        padding: 5px;
+        font-weight: normal;
+    }
+}
+
+#_OUIJA_BOARD {
+    td:nth-child(1),
+    td:nth-child(3) {
+        text-align: left;
+    }
+}
+#_TAROT_CARD {
+    td:nth-child(3) {
+        text-align: left;
+    }
+}
+
+.tipsItem {
+    border: 1px solid #ddd;
+    padding: 10px;
+    padding-top: 0px;
+    border-radius: 5px;
+    /* margin: 3px; */
+    margin: 10px 0px;
+    /* overflow: hidden; */
+    position: relative;
+    .tTitleArea {
+        position: sticky;
+        top: 10px;
+        z-index: 100;
+        background-color: #141414;
+        margin-top: 1px;
+        height: 42px;
+        top: 0;
+    }
+    .tTitle {
+        border-bottom: 1px solid #ddd;
+        padding: 5px;
+
+        font-size: 21px;
+        margin: 0;
+    }
+    .tHide {
+        position: absolute;
+        top: 8px;
+        right: 11;
+        background-color: #141414;
+        width: 80px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+
+        align-items: center;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        span {
+            pointer-events: none;
+        }
+        .tHideMsgShow {
+            display: none;
+        }
+    }
+    .content {
+        font-size: 15px;
+        .conTitle {
+            margin: 4px;
+            margin-top: 13px;
+        }
+        .conSubTitle {
+            margin: 4px;
+            text-align: left;
+            margin-top: 15px;
+        }
+        ul {
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+        li {
+            position: relative;
+            padding-left: 8px;
+            margin: 0;
+            margin-bottom: 8px;
+            list-style: none;
+        }
+        li:before {
+            content: "";
+            position: absolute;
+            top: 0.8em;
+            left: 0;
+            width: 3px;
+            height: 3px;
+            background-color: #ddd;
+        }
+    }
+    &.hide {
+        height: 49px;
+        .tTitle {
+            /* text-decoration: line-through; */
+            /* color: #888; */
+            border: 0;
+        }
+        .tHideMsgShow {
+            display: inline;
+        }
+        .tHideMsgHide {
+            display: none;
+        }
+        .content {
+            display: none;
+        }
+    }
+}

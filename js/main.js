@@ -256,6 +256,13 @@ const reset = () => {
     Array.from(document.getElementsByClassName("gInfo")).forEach((el) => {
         el.classList.remove("hide");
     });
+
+    //Ebidenceタブへ遷移
+    Array.from(document.getElementsByClassName("pages")).forEach((el) => {
+        el.classList.add("hide");
+    });
+    document.getElementById(`_SURVEY_PAGE`).classList.remove("hide");
+
     //サイドメニュー隠す
     _SIDE_BUTTON.classList.toggle("on");
 };
