@@ -1,0 +1,243 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- <link rel="icon" href="./media/favicon-white.png" /> -->
+        <link rel="icon" href="./media/ghost-96.png" />
+        <title>Survey Tool</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./main.css?version=1.0.0" />
+    </head>
+    <body>
+        <div id="_TIPS_ITEMS">
+            <div id="_MAP" class="mainItem hide">
+                <div class="titleArea">
+                    <p class="title">Map</p>
+                    <div class="division"></div>
+                    <div class="hide">
+                        <span class="hideMsgHide">Hide</span
+                        ><span class="hideMsgShow">Show</span>
+                    </div>
+                </div>
+                <div class="content">
+                    <p class="conTitle">- マップサイズと正気度 -</p>
+                    <ul>
+                        <li>
+                            マップサイズによって暗闇での正気度の減りが違う。<br />
+                            減少量は 小 > 中 > 大 の順番
+                        </li>
+                    </ul>
+                    <p class="conTitle">- マップサイズと最大照明数 -</p>
+                    <ul>
+                        <li>以下を超えて照明をつけるとブレーカーが落ちる。</li>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>マップサイズ</th>
+
+                                    <th>最大照明数</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>小</td>
+                                    <td>10ヵ所</td>
+                                </tr>
+                                <tr>
+                                    <td>中</td>
+                                    <td>9ヵ所</td>
+                                </tr>
+                                <tr>
+                                    <td>大</td>
+                                    <td>8ヵ所</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </ul>
+
+                    <p class="conTitle">- マップサイズ一覧 -</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>マップ</th>
+                                <th>サイズ</th>
+                                <th>推奨人数</th>
+                                <th>概要</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>6 Tanglewood Drive</td>
+                                <td>小</td>
+                                <td>1人</td>
+                                <td>一軒家</td>
+                            </tr>
+                            <tr>
+                                <td>Camp Woodwind</td>
+                                <td>小</td>
+                                <td>1人</td>
+                                <td>キャンプ場</td>
+                            </tr>
+                            <tr>
+                                <td>Bleasdale Farmhouse</td>
+                                <td>小</td>
+                                <td>2人</td>
+                                <td>農家</td>
+                            </tr>
+                            <tr>
+                                <td>Grafton Farmhous</td>
+                                <td>小</td>
+                                <td>2人</td>
+                                <td>農家</td>
+                            </tr>
+                            <tr>
+                                <td>10 Ridgeview Court</td>
+                                <td>小</td>
+                                <td>2人</td>
+                                <td>一軒家</td>
+                            </tr>
+                            <tr>
+                                <td>42 Edgefield Road</td>
+                                <td>小</td>
+                                <td>2人</td>
+                                <td>一軒家</td>
+                            </tr>
+                            <tr>
+                                <td>13 Willow Street</td>
+                                <td>小</td>
+                                <td>2人</td>
+                                <td>一軒家</td>
+                            </tr>
+                            <tr>
+                                <td>Point Hope</td>
+                                <td>中</td>
+                                <td>2人</td>
+                                <td>灯台</td>
+                            </tr>
+                            <tr>
+                                <td>Prison</td>
+                                <td>中</td>
+                                <td>3人</td>
+                                <td>刑務所</td>
+                            </tr>
+                            <tr>
+                                <td>Maple Lodge Campsite</td>
+                                <td>中</td>
+                                <td>3人</td>
+                                <td>キャンプ場</td>
+                            </tr>
+                            <tr>
+                                <td>Brownstone High School</td>
+                                <td>大</td>
+                                <td>3人</td>
+                                <td>学校</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Sunny Meadows Mental <br />Institution
+                                    Restricted
+                                </td>
+                                <td>中</td>
+                                <td>3人</td>
+                                <td>精神病院</td>
+                            </tr>
+                            <tr>
+                                <td>Sunny Meadows<br />Mental Institution</td>
+                                <td>大</td>
+                                <td>4人</td>
+                                <td>精神病院</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="_TIPS" class="mainItem hide">
+                <div class="titleArea">
+                    <p class="title">Tips</p>
+                    <div class="division"></div>
+                    <div class="hide">
+                        <span class="hideMsgHide">Hide</span
+                        ><span class="hideMsgShow">Show</span>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <p class="conTitle">- アイテムについて -</p>
+                    <ul>
+                        <li>UVライトを立って真上を向いて捨てると床に立つ。</li>
+                        <li>
+                            アイテムはドアを貫通するので、<br />玄関を開ける前にアイテムを中に投げ込める。
+                        </li>
+                        <li>
+                            干渉されたものについたEMFのタイマーは<br />インベントリにしまうと一時停止する。
+                        </li>
+                    </ul>
+                    <p class="conTitle">- マップ関連 -</p>
+                    <p class="conSubTitle">== 6 Tanglewood Drive ==</p>
+                    <ul>
+                        <li>キッチンの棚の中に顔のついたジャガイモがある。</li>
+                    </ul>
+                    <p class="conSubTitle">== Maple Lodge Campsite ==</p>
+                    <ul>
+                        <li>
+                            桟橋の端まで行くと、ジェイソンのマスクが浮かぶ。
+                        </li>
+                        <li>キャビンの下に死体袋が置いてある。</li>
+                        <li>
+                            テレビを消すと、ゴーストがいないにもかかわらず、<br />電話が鳴る干渉が確率で発生する。<br />EMFも普通に発生して、干渉の写真もちゃんと撮れる。
+                        </li>
+                        <li>
+                            マップ外の数ヶ所に確率で、スレンダーマンが出現。
+                            「Camp Woodwind」も。
+                        </li>
+                    </ul>
+                    <p class="conSubTitle">
+                        == Sunny Meadows Mental Institution ==
+                    </p>
+                    <ul>
+                        <li>
+                            「Asylum」の病室の7号室に<br />患者07号の残したメッセージがある。(UV-Light)
+                        </li>
+                        <li>
+                            パッド入りルームに患者07号が書いたと思われる<br />日数を数える手書きがUVライトで浮かび上がり、<br />死体安置所に彼女の遺体が置いてある。
+                        </li>
+                        <li>地下右端の「Examination Room」に異形の本。</li>
+                    </ul>
+                    <p class="conSubTitle">== Point Hope ==</p>
+                    <ul>
+                        <li>
+                            「Child Bedroom」のオウムのぬいぐるみを使うと<br />「Shiver
+                            Me Timbers」と声が再生される。
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        document.addEventListener("DOMContentLoaded", async () => {
+            window.addEventListener("load", sendHeight);
+            window.addEventListener("resize", sendHeight);
+            document.addEventListener("click", function (event) {
+                const target = event.target;
+                //Ghostの表示非表示（手動）
+                if (target.classList.contains("hide")) {
+                    target.parentNode.parentNode.classList.toggle("hide");
+                    sendHeight();
+                }
+            });
+        });
+
+        function sendHeight() {
+            window.parent.postMessage(
+                { height: document.body.offsetHeight },
+                "*"
+            );
+        }
+    </script>
+</html>
