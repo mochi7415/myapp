@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="./main.css?version=1.0.0" />
     </head>
     <body>
-        <div id="_TIPS_ITEMS">
+        <div id="_TIPS_ITEMS" style="display: none">
             <div id="_MAP" class="mainItem hide">
                 <div class="titleArea">
                     <p class="title">Map</p>
@@ -220,8 +220,8 @@
         </div>
     </body>
     <script>
-        // url =
-        // "https://script.google.com/macros/s/AKfycbz0yGc-2R2-X6yOswk3ifLp3yq73FoBXkHn4mYV_UtRdwLedYbub-3rv8sFW2CmgjvZ/exec";
+        const postUrl =
+            "https://script.google.com/macros/s/AKfycbz0yGc-2R2-X6yOswk3ifLp3yq73FoBXkHn4mYV_UtRdwLedYbub-3rv8sFW2CmgjvZ/exec";
         document.addEventListener("DOMContentLoaded", async () => {
             document.addEventListener("click", function (event) {
                 const target = event.target;
@@ -243,29 +243,30 @@
             }
         }
 
-        const url =
+        const getUrl =
             "https://script.google.com/macros/s/AKfycbz0yGc-2R2-X6yOswk3ifLp3yq73FoBXkHn4mYV_UtRdwLedYbub-3rv8sFW2CmgjvZ/exec?sheetName=db&cell=A1";
 
-        const options = {
+        const getOptions = {
             method: "GET",
             mode: "cors",
             headers: {
-                "Content-Type": "application/json",
+                "Content-Type": "text/plain",
             },
         };
-        fetchData(url, options);
+        fetchData(getUrl, getOptions);
 
-        // const options = {
-        //     method: "POST",
-        //     headers: {
-        //         "Content-Type": "application/json",
-        //     },
-        //     body: JSON.stringify({
-        //         sheet: "db",
-        //         cell: "A1",
-        //         value: "値",
-        //     }),
-        // };
-        // fetchData(url, options);
+        const postOptions = {
+            method: "POST",
+            mode: "cors",
+            headers: {
+                "Content-Type": "text/plain",
+            },
+            body: JSON.stringify({
+                sheet: "db",
+                cell: "A1",
+                value: "test",
+            }),
+        };
+        // fetchData(postUrl, postOptions);
     </script>
 </html>
