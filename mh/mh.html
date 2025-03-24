@@ -220,9 +220,9 @@
         </div>
     </body>
     <script>
+        url =
+            "https://script.google.com/macros/s/AKfycbz0yGc-2R2-X6yOswk3ifLp3yq73FoBXkHn4mYV_UtRdwLedYbub-3rv8sFW2CmgjvZ/exec";
         document.addEventListener("DOMContentLoaded", async () => {
-            window.addEventListener("load", sendHeight);
-            window.addEventListener("resize", sendHeight);
             document.addEventListener("click", function (event) {
                 const target = event.target;
                 //Ghostの表示非表示（手動）
@@ -233,11 +233,25 @@
             });
         });
 
-        function sendHeight() {
-            window.parent.postMessage(
-                { height: document.body.offsetHeight },
-                "*"
-            );
+        async function fetchData(url, options) {
+            try {
+                const response = await fetch(url, options);
+                const data = await response.json();
+            } catch (error) {
+                console.error("Error:", error);
+            }
         }
+        const options = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                sheet: "db",
+                cell: "A1",
+                value: "値",
+            }),
+        };
+        fetchData(url, options);
     </script>
 </html>
